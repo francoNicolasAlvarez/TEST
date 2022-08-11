@@ -1,0 +1,10 @@
+<h2>Cursos en desarrollo</h2>
+<div class="courses-menu">
+  <a *ngFor="let course of courses" routerLink="/courses/{{ course.id }}">
+    <div *ngIf="course.developing">
+      {{ course.name }}
+      <br />
+      <button type="button" (click)="course.developing = false">Borrar</button>
+    </div>
+  </a>
+</div>
